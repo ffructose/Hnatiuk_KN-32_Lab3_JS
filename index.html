@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гнатюк КН32 Лаб1 ДжаваСкрипт</title>
+
+    <link type="text/css" rel="stylesheet" href="css/reset.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="lab2.js"></script>
+</head>
+
+<body class="body">
+    <header class="header">
+        <h1>
+            Лабораторна робота 2 - Javascript
+        </h1>
+
+        <h2 style="padding-top: 1vw;">
+            Виконала студентка групи КН32
+            <br> Гнатюк Анна Михайлівна
+        </h2>
+
+    </header>
+
+    <main class="main">
+        <section class="menu">
+            <ul class="menu-list">
+                <li>
+                    <a href="../../джсЛаб1/index.html">
+                        Лабораторна робота 1
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        Лабораторна робота 2
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        Лабораторна робота 3
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        Лабораторна робота 4
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <section class="task">
+
+            <h3>
+                Завдання на лабораторну роботу:
+            </h3>
+            <p class="p-text">
+                На Вашій сторінці є малюнок. При наведенні миші на цей
+                малюнок він повинен змінитися. Коли Ви відведете мишку в
+                сторону, малюнок має набути початкового вигляду.
+
+                <br><br>Ввести No телефона (поле вводу) і назву міста (з клавіатури).
+                Якщо введено місто, якого немає в списку, то повідомити про це
+                користувача, інакше вивести No телефона, поставивши перед ним
+                код міста.
+            </p>
+        </section>
+
+        <section class="result">
+
+            <div class="first">
+                <h3>Введіть номер телефону <br>(по місту) та місто</h3>
+                <div class="input-block">
+                    <label>
+                        <input type="tel" id="telInput" placeholder="Номер">
+                    </label>
+                    <label>
+                        <input type="text" id="cityInput" placeholder="Місто">
+                    </label>
+                    <button class="b-button" onclick="confirmAction()">
+                        підтвердити
+                    </button>
+                </div>
+                <div id="resultContainer" class="result_output">
+
+                </div>
+            </div>
+
+            <div class="second">
+                <img src="новорічнаЯ.jpg" alt="я пю какао">
+            </div>
+
+        </section>
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,259 @@
+@font-face {
+    font-family: "myFont";
+    src: url(../fonts/AdventPro/AdventPro_ExtraExpanded-Medium.ttf);
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+.body {
+    font-family: "myFont";
+    width: 100vw;
+
+    background-color: rgb(255, 213, 251);
+}
+
+.header {
+    text-align: center;
+    background-color: rgb(225, 181, 255);
+    width: 100vw;
+}
+
+h1 {
+    font-family: "myFont";
+    font-size: 4.5vw;
+    line-height: 5vw;
+    font-weight: 500;
+}
+
+h2 {
+    font-family: "myFont";
+    font-size: 2.5vw;
+    line-height: 4vw;
+    font-weight: 300;
+}
+
+.menu {
+    background-color: rgb(252, 192, 229);
+}
+
+.menu-list {
+    list-style: none;
+    margin: 0px 0 5px;
+    padding: 25px 0 5px;
+    text-align: center;
+}
+
+.menu-list li {
+    display: inline-block;
+}
+
+.menu-list li:after {
+    content: "|";
+    color: brown;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 30px;
+}
+
+.menu-list a {
+    text-decoration: none;
+    font-family: "myFont";
+    letter-spacing: 2px;
+    position: relative;
+    padding-bottom: 20px;
+    margin: 0 34px 0 30px;
+    font-size: 30px;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: color .2s;
+}
+
+.menu-list a,
+.menu-list a:visited {
+    color: brown;
+
+}
+
+.menu-list a:hover {
+    color: beige;
+}
+
+.menu-list a::before,
+.menu-list a::after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    top: auto;
+    right: 0%;
+    bottom: -5%;
+    left: 150%;
+    background: burlywood;
+    transition: .8s;
+}
+
+.menu-list a:hover::before,
+.menu-list .current:before {
+    left: 0;
+}
+
+.menu-list>a:hover::after,
+.menu-list .current:after {
+    left: 0;
+}
+
+@media (max-width: 550px) {
+    .menu-list {
+        padding-top: 0;
+    }
+
+    .menu-list li {
+        display: block;
+    }
+
+    .menu-list li::after {
+        content: none;
+    }
+
+    .menu-list a {
+        padding: 25px 0 20px;
+        margin: 0 30px;
+    }
+}
+
+.task {
+    padding-top: 2vw;
+    text-align: center;
+    width: 90vw;
+    padding-left: 5vw;
+
+}
+
+h3 {
+    font-family: "myFont";
+    font-size: 3vw;
+    line-height: 4vw;
+    font-weight: 800;
+}
+
+p {
+    font-family: "myFont";
+    font-size: 2vw;
+    line-height: 2vw;
+    font-weight: 200;
+}
+
+.p-list {
+    text-align: start;
+    padding-top: 3vw;
+}
+
+.p-text {
+    text-align: center;
+    padding-top: 2vw;
+    padding-bottom: 3vw;
+
+
+}
+
+
+
+
+.b-button {
+    background-color: cornflowerblue;
+    font-family: "myFont";
+    border: none;
+    color: aliceblue;
+    padding: 1vw 1vw 1vw 1vw;
+    margin-top: 2vw;
+    margin-bottom: 10vw;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 8px;
+    font-size: 2vw;
+    transition: all 0.3s ease-out;
+    text-align: center;
+    margin-left: 68%;
+}
+
+.b-button:hover {
+    background-color: rgb(168, 112, 201);
+
+
+}
+
+.first {
+    width: 50%;
+    padding-top: 3vw;
+
+}
+
+input {
+    border: 2px solid black;
+    border-radius: 4px;
+    background-color: rgb(253, 190, 255);
+    font-family: "myFont";
+    font-size: 2vw;
+    width: 45%;
+    padding-top: 0.5vw;
+    padding-bottom: 0.5vw;
+    padding-left: 1vw;
+}
+
+input:focus {
+    border: 2px solid rgb(59, 44, 59);
+    border-radius: 4px;
+    background-color: rgb(254, 215, 255);
+    font-family: "myFont";
+    font-size: 2vw;
+}
+
+.input-block {
+    padding-top: 2vw;
+
+}
+
+.second {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.second img {
+    width: 74%;
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+}
+
+.second img:hover {
+    width: 80%;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    border-radius: 64vw;
+    filter: contrast(120%);
+}
+
+.result {
+    padding-left: 5%;
+    width: 95%;
+    background-color: pink;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: top;
+
+
+}
+
+.result>h1 {
+    font-family: "myFont";
+    font-size: 3vw;
+    line-height: 4vw;
+    font-weight: 800;
+}
+
+.result_output{
+    font-family: "myFont";
+    font-size: 3vw; 
+    text-align: center;
+}
