@@ -8,7 +8,7 @@
 
     <link type="text/css" rel="stylesheet" href="css/reset.css">
     <link type="text/css" rel="stylesheet" href="css/style.css">
-    <script type="text/javascript" src="lab2.js"></script>
+    <script type="text/javascript" src="lab3.js"></script>
 </head>
 
 <body class="body">
@@ -76,25 +76,395 @@
         <section class="result">
 
             <div class="first">
-                <h3>Введіть номер телефону <br>(по місту) та місто</h3>
-                <div class="input-block">
-                    <label>
-                        <input type="tel" id="telInput" placeholder="Номер">
-                    </label>
-                    <label>
-                        <input type="text" id="cityInput" placeholder="Місто">
-                    </label>
-                    <button class="b-button" onclick="confirmAction()">
-                        підтвердити
-                    </button>
-                </div>
-                <div id="resultContainer" class="result_output">
+                <table class="table" id="myTable1">
+                    <tr>
+                        <td>31</td>
+                        <td>42</td>
+                        <td>87</td>
+                        <td>159</td>
+                        <td>204</td>
+                        <td>76</td>
+                        <td>221</td>
+                        <td>98</td>
+                        <td>183</td>
+                    </tr>
+                    <tr>
+                        <td>105</td>
+                        <td>74</td>
+                        <td>198</td>
+                        <td>33</td>
+                        <td>127</td>
+                        <td>56</td>
+                        <td>240</td>
+                        <td>183</td>
+                        <td>72</td>
+                    </tr>
+                    <tr>
+                        <td>91</td>
+                        <td>167</td>
+                        <td>50</td>
+                        <td>112</td>
+                        <td>195</td>
+                        <td>88</td>
+                        <td>143</td>
+                        <td>219</td>
+                        <td>63</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>199</td>
+                        <td>120</td>
+                        <td>73</td>
+                        <td>32</td>
+                        <td>184</td>
+                        <td>97</td>
+                        <td>150</td>
+                        <td>210</td>
+                    </tr>
+                </table>
 
-                </div>
+                <button class="button" onclick="highlightMaxCell()" id="rezult">
+                    Знайти максимальне число
+                </button>
             </div>
 
             <div class="second">
-                <img src="новорічнаЯ.jpg" alt="я пю какао">
+                <table class="table" id="myTable2">
+                    <tr>
+                        <td>31</td>
+                        <td>42</td>
+                        <td>87</td>
+                        <td>159</td>
+                        <td>204</td>
+                        <td>76</td>
+                        <td>221</td>
+                        <td>98</td>
+                        <td>183</td>
+                    </tr>
+                    <tr>
+                        <td>105</td>
+                        <td>74</td>
+                        <td>198</td>
+                        <td>33</td>
+                        <td>127</td>
+                        <td>56</td>
+                        <td>240</td>
+                        <td>183</td>
+                        <td>72</td>
+                    </tr>
+                    <tr>
+                        <td>91</td>
+                        <td>167</td>
+                        <td>50</td>
+                        <td>112</td>
+                        <td>195</td>
+                        <td>88</td>
+                        <td>143</td>
+                        <td>219</td>
+                        <td>63</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>199</td>
+                        <td>120</td>
+                        <td>73</td>
+                        <td>32</td>
+                        <td>184</td>
+                        <td>97</td>
+                        <td>150</td>
+                        <td>210</td>
+                    </tr>
+                </table>
+
+                <button class="button" onclick="displayNumbers()">
+                    Отримати числа
+                </button>
+                <input class="input_pole" type="text" id="outputField" readonly>
+            </div>
+
+            <div class="third">
+                <table class="table" id="myTable3">
+                    <tr>
+                        <td>315</td>
+                        <td>42</td>
+                        <td>87</td>
+                        <td>159</td>
+                        <td>204</td>
+                        <td>76</td>
+                        <td>221</td>
+                        <td>98</td>
+                        <td>183</td>
+                    </tr>
+                    <tr>
+                        <td>105</td>
+                        <td>74</td>
+                        <td>198</td>
+                        <td>33</td>
+                        <td>127</td>
+                        <td>56</td>
+                        <td>240</td>
+                        <td>183</td>
+                        <td>72</td>
+                    </tr>
+                    <tr>
+                        <td>91</td>
+                        <td>167</td>
+                        <td>50</td>
+                        <td>112</td>
+                        <td>195</td>
+                        <td>88</td>
+                        <td>143</td>
+                        <td>219</td>
+                        <td>63</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>199</td>
+                        <td>120</td>
+                        <td>73</td>
+                        <td>32</td>
+                        <td>184</td>
+                        <td>97</td>
+                        <td>150</td>
+                        <td>210</td>
+                    </tr>
+                    <tr id="sumRow">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+
+                <button class="button" onclick="calculateColumnSums()" id="rezult">
+                    Знайти суми
+                </button>
+            </div>
+
+            <div class="fourth">
+                <table class="table" id="myTable4" style="grid-area: 1/1 /2 /3;">
+                    <tr>
+                        <td onclick="pick(this)">315</td>
+                        <td onclick="pick(this)">42</td>
+                        <td onclick="pick(this)">87</td>
+                        <td onclick="pick(this)">159</td>
+                        <td onclick="pick(this)">204</td>
+                        <td onclick="pick(this)">76</td>
+                        <td onclick="pick(this)">221</td>
+                        <td onclick="pick(this)">98</td>
+                        <td onclick="pick(this)">183</td>
+                    </tr>
+                    <tr>
+                        <td onclick="pick(this)">105</td>
+                        <td onclick="pick(this)">74</td>
+                        <td onclick="pick(this)">198</td>
+                        <td onclick="pick(this)">33</td>
+                        <td onclick="pick(this)">127</td>
+                        <td onclick="pick(this)">56</td>
+                        <td onclick="pick(this)">240</td>
+                        <td onclick="pick(this)">183</td>
+                        <td onclick="pick(this)">72</td>
+                    </tr>
+                    <tr>
+                        <td onclick="pick(this)">91</td>
+                        <td onclick="pick(this)">167</td>
+                        <td onclick="pick(this)">50</td>
+                        <td onclick="pick(this)">112</td>
+                        <td onclick="pick(this)">195</td>
+                        <td onclick="pick(this)">88</td>
+                        <td onclick="pick(this)">143</td>
+                        <td onclick="pick(this)">219</td>
+                        <td onclick="pick(this)">63</td>
+                    </tr>
+                    <tr>
+                        <td onclick="pick(this)">5</td>
+                        <td onclick="pick(this)">199</td>
+                        <td onclick="pick(this)">120</td>
+                        <td onclick="pick(this)">73</td>
+                        <td onclick="pick(this)">32</td>
+                        <td onclick="pick(this)">184</td>
+                        <td onclick="pick(this)">97</td>
+                        <td onclick="pick(this)">150</td>
+                        <td onclick="pick(this)">210</td>
+                    </tr>
+
+                </table>
+
+                <button class="button" onclick="calculateSum()" style="grid-area: 2/1; justify-self: start;">
+                    Знайти суму
+                </button>
+                <button class="button" onclick="resetCells()" style="grid-area: 2/2;">
+                    Скинути
+                </button>
+
+                <p id="result4" style="grid-area: 3;"></p>
+            </div>
+
+            <div class="fifth">
+                <table class="table" id="myTable5">
+                    <tr>
+                        <td onclick="editCell(this)">
+                            <span class="cell-content">315</span>
+                            <input class="inp" type="text" id="editInput" />
+                        </td>
+                        <td onclick="editCell(this)">
+                            <span class="cell-content">42</span>
+                            <input class="inp" type="text" id="editInput" />
+                        </td>
+                        <td onclick="editCell(this)">
+                            <span class="cell-content">87</span>
+                            <input class="inp" type="text" id="editInput" />
+                        </td>
+                        <td onclick="editCell(this)">
+                            <span class="cell-content">159</span>
+                            <input class="inp" type="text" id="editInput" />
+                        </td>
+                        <td onclick="editCell(this)">
+                            <span class="cell-content">204</span>
+                            <input class="inp" type="text" id="editInput" />
+                        </td>
+                        <td onclick="editCell(this)">
+                            <span class="cell-content">76</span>
+                            <input class="inp" type="text" id="editInput" />
+                        </td>
+                        <td onclick="editCell(this)">
+                            <span class="cell-content">221</span>
+                            <input class="inp" type="text" id="editInput" />
+                        </td>
+                        <td onclick="editCell(this)">
+                            <span class="cell-content">98</span>
+                            <input class="inp" type="text" id="editInput" />
+                        </td>
+                        <td onclick="editCell(this)">
+                            <span class="cell-content">183</span>
+                            <input class="inp" type="text" id="editInput" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td onclick="editCell(this)">
+                            <span class="cell-content">315</span>
+                            <input class="inp" type="text" id="editInput" />
+                        </td>
+                        <td onclick="editCell(this)">
+                            <span class="cell-content">42</span>
+                            <input class="inp" type="text" id="editInput" />
+                        </td>
+                        <td onclick="editCell(this)">
+                            <span class="cell-content">87</span>
+                            <input class="inp" type="text" id="editInput" />
+                        </td>
+                        <td onclick="editCell(this)">
+                            <span class="cell-content">159</span>
+                            <input class="inp" type="text" id="editInput" />
+                        </td>
+                        <td onclick="editCell(this)">
+                            <span class="cell-content">204</span>
+                            <input class="inp" type="text" id="editInput" />
+                        </td>
+                        <td onclick="editCell(this)">
+                            <span class="cell-content">76</span>
+                            <input class="inp" type="text" id="editInput" />
+                        </td>
+                        <td onclick="editCell(this)">
+                            <span class="cell-content">221</span>
+                            <input class="inp" type="text" id="editInput" />
+                        </td>
+                        <td onclick="editCell(this)">
+                            <span class="cell-content">98</span>
+                            <input class="inp" type="text" id="editInput" />
+                        </td>
+                        <td onclick="editCell(this)">
+                            <span class="cell-content">183</span>
+                            <input class="inp" type="text" id="editInput" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td onclick="editCell(this)">
+                            <span class="cell-content">315</span>
+                            <input class="inp" type="text" id="editInput" />
+                        </td>
+                        <td onclick="editCell(this)">
+                            <span class="cell-content">42</span>
+                            <input class="inp" type="text" id="editInput" />
+                        </td>
+                        <td onclick="editCell(this)">
+                            <span class="cell-content">87</span>
+                            <input class="inp" type="text" id="editInput" />
+                        </td>
+                        <td onclick="editCell(this)">
+                            <span class="cell-content">159</span>
+                            <input class="inp" type="text" id="editInput" />
+                        </td>
+                        <td onclick="editCell(this)">
+                            <span class="cell-content">204</span>
+                            <input class="inp" type="text" id="editInput" />
+                        </td>
+                        <td onclick="editCell(this)">
+                            <span class="cell-content">76</span>
+                            <input class="inp" type="text" id="editInput" />
+                        </td>
+                        <td onclick="editCell(this)">
+                            <span class="cell-content">221</span>
+                            <input class="inp" type="text" id="editInput" />
+                        </td>
+                        <td onclick="editCell(this)">
+                            <span class="cell-content">98</span>
+                            <input class="inp" type="text" id="editInput" />
+                        </td>
+                        <td onclick="editCell(this)">
+                            <span class="cell-content">183</span>
+                            <input class="inp" type="text" id="editInput" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td onclick="editCell(this)">
+                            <span class="cell-content">315</span>
+                            <input class="inp" type="text" id="editInput" />
+                        </td>
+                        <td onclick="editCell(this)">
+                            <span class="cell-content">42</span>
+                            <input class="inp" type="text" id="editInput" />
+                        </td>
+                        <td onclick="editCell(this)">
+                            <span class="cell-content">87</span>
+                            <input class="inp" type="text" id="editInput" />
+                        </td>
+                        <td onclick="editCell(this)">
+                            <span class="cell-content">159</span>
+                            <input class="inp" type="text" id="editInput" />
+                        </td>
+                        <td onclick="editCell(this)">
+                            <span class="cell-content">204</span>
+                            <input class="inp" type="text" id="editInput" />
+                        </td>
+                        <td onclick="editCell(this)">
+                            <span class="cell-content">76</span>
+                            <input class="inp" type="text" id="editInput" />
+                        </td>
+                        <td onclick="editCell(this)">
+                            <span class="cell-content">221</span>
+                            <input class="inp" type="text" id="editInput" />
+                        </td>
+                        <td onclick="editCell(this)">
+                            <span class="cell-content">98</span>
+                            <input class="inp" type="text" id="editInput" />
+                        </td>
+                        <td onclick="editCell(this)">
+                            <span class="cell-content">183</span>
+                            <input class="inp" type="text" id="editInput" />
+                        </td>
+                    </tr>
+                </table>
+
+                <button class="button" onclick="saveCell()">
+                    Зберегти
+                </button>
+
             </div>
 
         </section>

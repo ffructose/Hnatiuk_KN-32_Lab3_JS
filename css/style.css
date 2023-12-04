@@ -19,20 +19,6 @@
     width: 100vw;
 }
 
-h1 {
-    font-family: "myFont";
-    font-size: 4.5vw;
-    line-height: 5vw;
-    font-weight: 500;
-}
-
-h2 {
-    font-family: "myFont";
-    font-size: 2.5vw;
-    line-height: 4vw;
-    font-weight: 300;
-}
-
 .menu {
     background-color: rgb(252, 192, 229);
 }
@@ -102,45 +88,11 @@ h2 {
     left: 0;
 }
 
-@media (max-width: 550px) {
-    .menu-list {
-        padding-top: 0;
-    }
-
-    .menu-list li {
-        display: block;
-    }
-
-    .menu-list li::after {
-        content: none;
-    }
-
-    .menu-list a {
-        padding: 25px 0 20px;
-        margin: 0 30px;
-    }
-}
-
 .task {
     padding-top: 2vw;
     text-align: center;
     width: 90vw;
     padding-left: 5vw;
-
-}
-
-h3 {
-    font-family: "myFont";
-    font-size: 3vw;
-    line-height: 4vw;
-    font-weight: 800;
-}
-
-p {
-    font-family: "myFont";
-    font-size: 2vw;
-    line-height: 2vw;
-    font-weight: 200;
 }
 
 .p-list {
@@ -152,97 +104,44 @@ p {
     text-align: center;
     padding-top: 2vw;
     padding-bottom: 3vw;
-
-
 }
 
 
 
 
-.b-button {
-    background-color: cornflowerblue;
-    font-family: "myFont";
-    border: none;
-    color: aliceblue;
-    padding: 1vw 1vw 1vw 1vw;
-    margin-top: 2vw;
-    margin-bottom: 10vw;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    border-radius: 8px;
-    font-size: 2vw;
-    transition: all 0.3s ease-out;
-    text-align: center;
-    margin-left: 68%;
-}
 
-.b-button:hover {
-    background-color: rgb(168, 112, 201);
-
-
-}
-
-.first {
-    width: 50%;
-    padding-top: 3vw;
-
-}
-
-input {
-    border: 2px solid black;
-    border-radius: 4px;
-    background-color: rgb(253, 190, 255);
-    font-family: "myFont";
-    font-size: 2vw;
-    width: 45%;
-    padding-top: 0.5vw;
-    padding-bottom: 0.5vw;
-    padding-left: 1vw;
-}
-
-input:focus {
-    border: 2px solid rgb(59, 44, 59);
-    border-radius: 4px;
-    background-color: rgb(254, 215, 255);
-    font-family: "myFont";
-    font-size: 2vw;
-}
-
-.input-block {
-    padding-top: 2vw;
-
-}
-
-.second {
-    width: 50%;
-    display: flex;
+.result {
+    background-color: pink;
+    display: grid;
     justify-content: center;
 }
 
-.second img {
-    width: 74%;
-    padding-top: 3vw;
-    padding-bottom: 3vw;
+h1 {
+    font-family: "myFont";
+    font-size: 50px;
+    line-height: 45px;
+    font-weight: 500;
 }
 
-.second img:hover {
-    width: 80%;
-    padding-top: 2vw;
-    padding-bottom: 2vw;
-    border-radius: 64vw;
-    filter: contrast(120%);
+h2 {
+    font-family: "myFont";
+    font-size: 30px;
+    line-height: 35px;
+    font-weight: 300;
 }
 
-.result {
-    padding-left: 5%;
-    width: 95%;
-    background-color: pink;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: top;
+h3 {
+    font-family: "myFont";
+    font-size: 30px;
+    line-height: 35px;
+    font-weight: 800;
+}
 
-
+p {
+    font-family: "myFont";
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: 200;
 }
 
 .result>h1 {
@@ -252,8 +151,423 @@ input:focus {
     font-weight: 800;
 }
 
-.result_output{
-    font-family: "myFont";
-    font-size: 3vw; 
+.first {
+    width: 100%;
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+    display: grid;
+}
+
+th,
+td {
+    
     text-align: center;
+    padding: 5px;
+    border-top: 5px solid indianred;
+    border-right: 5px solid indianred;
+    border-bottom: 5px solid indianred;
+    border-left: 5px solid indianred;
+    cursor: pointer;
+    width: 65px;
+    height: 25px;
+}
+
+.table {
+    grid-area: 1 ;
+
+}
+
+.button {
+    grid-area: 2 ;
+    justify-self: end;
+
+    background-color: cornflowerblue;
+    font-family: "myFont";
+    border: none;
+    color: aliceblue;
+    padding: 10px;
+    margin-top: 35px;
+    margin-bottom: 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 8px;
+    font-size: 20px;
+    transition: all 0.3s ease-out;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: rgb(168, 112, 201);
+    cursor: pointer;
+}
+
+.highlight {
+    background-color: red;
+}
+
+
+.second {
+    width: 100%;
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+    display: grid;
+}
+
+.input_pole{
+    border-radius: 8px;
+    font-family: "myFont";
+    font-size: 15px;
+}
+
+.third {
+    width: 100%;
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+    display: grid;
+}
+
+.fourth {
+    width: 100%;
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+    display: grid;
+}
+
+.active {
+    background-color: red;
+}
+
+.fifth {
+    width: 100%;
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+    display: grid;
+}
+
+.inp{
+    display: none;
+    border-color: white;
+    width: 65px;
+    height: 25px;
+    background-color: skyblue;
+    
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-family: "myFont";
+        font-size: 30px;
+        line-height: 35px;
+        font-weight: 500;
+    }
+
+    h2 {
+        font-family: "myFont";
+        font-size: 20px;
+        line-height: 35px;
+        font-weight: 300;
+    }
+
+    h3 {
+        font-family: "myFont";
+        font-size: 25px;
+        line-height: 20px;
+        font-weight: 800;
+    }
+
+    p {
+        font-family: "myFont";
+        font-size: 18px;
+        line-height: 20px;
+        font-weight: 200;
+    }
+
+
+
+
+    .menu-list {
+        padding-top: 0;
+    }
+
+    .menu-list li {
+        display: block;
+    }
+
+    .menu-list li::after {
+        content: none;
+        font-size: 30px;
+    }
+
+    .menu-list a {
+        padding: 15px 0 15px;
+        margin: 0 30px;
+        font-size: 30px;
+        line-height: 10px;
+    }
+
+
+    .first {
+        width: 100%;
+        padding-top: 3vw;
+        padding-bottom: 3vw;
+        display: grid;
+    }
+    
+    th,
+    td {
+        
+        text-align: center;
+        padding: 5px;
+        border-top: 5px solid indianred;
+        border-right: 5px solid indianred;
+        border-bottom: 5px solid indianred;
+        border-left: 5px solid indianred;
+        cursor: pointer;
+        width: 35px;
+        height: 25px;
+    }
+    
+    .table {
+        grid-area: 1 ;
+    
+    }
+    
+    .button {
+        grid-area: 2 ;
+        justify-self: end;
+    
+        background-color: cornflowerblue;
+        font-family: "myFont";
+        border: none;
+        color: aliceblue;
+        padding: 10px;
+        margin-top: 35px;
+        margin-bottom: 30px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        border-radius: 8px;
+        font-size: 20px;
+        transition: all 0.3s ease-out;
+        text-align: center;
+    }
+    
+    .button:hover {
+        background-color: rgb(168, 112, 201);
+        cursor: pointer;
+    }
+    
+    .highlight {
+        background-color: red;
+    }
+    
+    
+    .second {
+        width: 100%;
+        padding-top: 3vw;
+        padding-bottom: 3vw;
+        display: grid;
+    }
+    
+    .input_pole{
+        border-radius: 8px;
+        font-family: "myFont";
+        font-size: 15px;
+    }
+    
+    .third {
+        width: 100%;
+        padding-top: 3vw;
+        padding-bottom: 3vw;
+        display: grid;
+    }
+    
+    .fourth {
+        width: 100%;
+        padding-top: 3vw;
+        padding-bottom: 3vw;
+        display: grid;
+    }
+    
+    .active {
+        background-color: red;
+    }
+    
+    .fifth {
+        width: 100%;
+        padding-top: 3vw;
+        padding-bottom: 3vw;
+        display: grid;
+    }
+    
+    .inp{
+        display: none;
+        border-color: white;
+        width: 35px;
+        height: 25px;
+        background-color: skyblue;
+        
+    }
+    
+}
+
+@media (max-width: 425px) {
+
+    h1 {
+        font-size: 25px;
+        line-height: 35px;
+    }
+
+    h2 {
+        font-size: 20px;
+        line-height: 35px;
+    }
+
+    h3 {
+        font-size: 25px;
+        line-height: 35px;
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+
+
+    .menu-list {
+        padding-top: 0;
+    }
+
+    .menu-list li {
+        display: block;
+    }
+
+    .menu-list li::after {
+        content: none;
+        font-size: 20px;
+    }
+
+    .menu-list a {
+        padding: 15px 0 10px;
+        margin: 0 30px;
+        font-size: 25px;
+    }
+
+
+    .result {
+        display: block;
+        justify-content: center;
+        align-items: top;
+    }
+
+    .first {
+        width: 100%;
+        padding-top: 3vw;
+        display: block;
+    }
+
+    .first {
+        width: 100%;
+        padding-top: 3vw;
+        padding-bottom: 3vw;
+        display: grid;
+    }
+    
+    th,
+    td {
+        
+        text-align: center;
+        padding: 5px;
+        border-top: 5px solid indianred;
+        border-right: 5px solid indianred;
+        border-bottom: 5px solid indianred;
+        border-left: 5px solid indianred;
+        cursor: pointer;
+        width: 25px;
+        height: 25px;
+    }
+    
+    .table {
+        grid-area: 1 ;
+    
+    }
+    
+    .button {
+        grid-area: 2 ;
+        justify-self: end;
+    
+        background-color: cornflowerblue;
+        font-family: "myFont";
+        border: none;
+        color: aliceblue;
+        padding: 10px;
+        margin-top: 35px;
+        margin-bottom: 30px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        border-radius: 8px;
+        font-size: 20px;
+        transition: all 0.3s ease-out;
+        text-align: center;
+    }
+    
+    .button:hover {
+        background-color: rgb(168, 112, 201);
+        cursor: pointer;
+    }
+    
+    .highlight {
+        background-color: red;
+    }
+    
+    
+    .second {
+        width: 100%;
+        padding-top: 3vw;
+        padding-bottom: 3vw;
+        display: grid;
+    }
+    
+    .input_pole{
+        border-radius: 8px;
+        font-family: "myFont";
+        font-size: 15px;
+    }
+    
+    .third {
+        width: 100%;
+        padding-top: 3vw;
+        padding-bottom: 3vw;
+        display: grid;
+    }
+    
+    .fourth {
+        width: 100%;
+        padding-top: 3vw;
+        padding-bottom: 3vw;
+        display: grid;
+    }
+    
+    .active {
+        background-color: red;
+    }
+    
+    .fifth {
+        width: 100%;
+        padding-top: 3vw;
+        padding-bottom: 3vw;
+        display: grid;
+    }
+    
+    .inp{
+        display: none;
+        border-color: white;
+        width: 25px;
+        height: 25px;
+        background-color: skyblue;
+        
+    }
 }
